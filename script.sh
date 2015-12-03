@@ -16,15 +16,6 @@ destination="${queryNoSpace#*/}"
 
 
 
-# National Rail site likes things in 15 minute slots
-# So find the next quarter-hour
-eval $(date +Y=%Y\;m=%m\;d=%d\;H=%H\;M=%M)
-if   [[ "$M" < "15" ]] ; then M=15
-elif [[ "$M" < "30" ]] ; then M=30
-elif [[ "$M" < "45" ]] ; then M=45
-else M=00
-fi
-
 
 
 
